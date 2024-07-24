@@ -46,26 +46,3 @@ func ReadCSV(filePath string) ([]models.Users, error) {
 }
 
 
-// func ReadCSV(filePath string) ([]models.Users, error) {
-//     f, err := excelize.OpenFile(filePath)
-//     if err != nil {
-//         return nil, err
-//     }
-
-//     rows, err := f.GetRows("Users")
-//     if err != nil {
-//         return nil, err
-//     }
-
-//     var users []models.Users
-//     for _, row := range rows[1:] {
-//         if len(row) >= 2 {
-//             user := models.Users{
-//                 Name:  row[0],
-//                 Email: row[1],
-//             }
-//             users = append(users, user)
-//         }
-//     }
-//     return users, nil
-// }
